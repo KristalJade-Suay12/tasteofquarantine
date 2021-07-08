@@ -1,0 +1,499 @@
+/*nav bar code*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+html {
+    scroll-behavior: smooth;
+}
+body {
+	font-size:22px;
+	line-height: 32px;
+	margin: 0;
+	padding: 0;
+	word-wrap:break-word !important;
+	font-family: 'Open Sans', sans-serif;
+	background: url(image/background.jpg)no-repeat;
+	
+}
+a {
+	color: #F;
+}
+#container {
+	margin: 0 auto;
+	max-width: 890px;
+}
+
+.dropdown, [id^=drop] {
+	display: none;
+}
+
+
+nav { 
+	margin: 0;
+	padding: 0;
+	background-color: rgba(100,155,135,.7);
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+.logo  {
+	display: block;
+	margin-bottom: -5px;
+	float: left;
+	border-radius: 50%;
+}
+
+
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	background-color: rgba(100,155,135,.6);
+	}
+
+
+nav a {
+	display:block;
+	padding:14px 20px;	
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+
+
+nav ul li ul li:hover { background: #1c1f1d; }
+
+nav a:hover { 
+	background-color: #1c1f1d 
+}
+
+
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; 
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	left:170px; 
+}
+
+	
+
+@media all and (max-width : 768px) {
+
+
+	nav {
+		margin: 0;
+	}
+
+
+	.dropdown + a,
+	.menu {
+		display: none;
+	}
+
+	.dropdown {
+		
+		display: block;
+		background-color: #79827b;
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px;
+		text-decoration:none;
+		border:none;
+
+	}
+
+	.dropdown:hover {
+		background-color: #1c1f1d;
+	}
+
+	
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+
+	nav ul li {
+		display: block;
+		width: 100%;
+		}
+
+	nav ul ul .dropdown,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: #1c1f1d;
+	}
+  
+	nav ul li ul li .dropdown,
+	nav ul ul a,
+  nav ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+  
+  
+	nav ul li ul li .dropdown,
+	nav ul ul a {
+		background-color: #212121; 
+	}
+
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		
+	}
+		
+	
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+	
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+
+	nav ul ul ul li {
+		position: static;
+	}
+
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
+
+/*carousel code start here*/
+}
+.mySlides {
+    display: none
+}
+img {
+    vertical-align: middle;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+
+.slideshow-container {
+  max-width: 75%;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+.dot{
+ height: 10px;
+  width: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .prev, .next,.text {font-size: 14px}
+}
+
+.slider{
+	position: relative;
+	width: 100%;
+	background: #2c3e50; /* darckblue */
+}
+.myslide{
+	height: 655px;
+	display: none;
+	overflow: hidden;
+	position: relative;
+}
+
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
+}
+.next{
+	right: 0;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+.active, .dot:hover{
+	border-color: #00a7ff; /* blue */
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+.txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 40%;
+	left: 15%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+
+@keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+.txt h1 {
+	color: #00a7ff; /* blue */
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+.txt p {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+img {
+	transform: scale(1.5, 1.5);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 40s;
+}
+@-webkit-keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+
+@keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+@media screen and (max-width: 800px) {
+	.myslide {
+		height: 500px;
+	}
+	.txt {
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+	}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.txt h1 {
+		font-size: 40px;
+	}
+	.txt p {
+		font-size: 13px;
+	}
+
+}
+
+@media screen and (max-width: 520px) {
+	.txt h1 {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	.sign {
+		margin-right: 20px;
+	}
+	.sign a {
+		font-size: 12px;
+	}
+}
+.classic_button_next { 
+	position: absolute; right: 100px; top: 5px; 
+}
+.classic_button_prev { 
+	position: absolute; right: 88px; top: 5px; 
+}
+
+

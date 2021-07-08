@@ -1,0 +1,72 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-weight: 'Century Ghotic';
+	background-image:  url(image/background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% ;
+	min-height: 100vh;
+	width: 100%; 
+	background-position: center;
+}
+
+.container{
+
+	height: 60vh;
+	width: 35%;
+	background-color: rgba(100,155,135,.6);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.inner{
+	margin: 5px;
+	padding: 5px;
+	
+}
+.container h2{
+	color: black;
+	margin-top: 50px;
+}
+.container p{
+	color: black;
+	margin-top: 60px
+}
+.sababa{
+	margin-top: 650px;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	height: 25vh;
+	background-color: rgba(100,155,135,.3);
+}
+
+.sababa h3{
+	margin-top: 15px;
+	font-size: 25px;
+	color: green ;
+}
+
+.sababa p{
+	margin-top: 2px;
+	color: #000;
+	font-size: 15px;
+}
+
+.socmed{
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+.socmed a{
+	margin-left: 5px;
+	font-size: 40px;
+	text-decoration: none;
+}
+
+.socmed i{
+	text-decoration: none;
+	color: rgba(100,155,135,100);
+}
